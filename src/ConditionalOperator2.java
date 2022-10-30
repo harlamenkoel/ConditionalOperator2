@@ -31,6 +31,7 @@ public class ConditionalOperator2 {
             System.out.println("Ссылка на скачивание приложения для " + action);
         }
 
+        System.out.println();
         System.out.println("Задача 3");
         System.out.print("Введите год: ");
         int year = scanner.nextInt();
@@ -39,6 +40,27 @@ public class ConditionalOperator2 {
             System.out.println("Год является високосным");
         } else {
             System.out.println("Год не является високосным");
+        }
+
+        System.out.println();
+        System.out.println("Задача 4");
+
+        int minimalDeliveryTime = 1;
+
+        System.out.print("Введите растояние до вас: ");
+        int deliveryDistance = scanner.nextInt();
+        if (deliveryDistance <= 19) {
+            System.out.println("Для доставки вашей банковской карты нам потребуеться "
+                    + minimalDeliveryTime + " день");
+        } else if (deliveryDistance <= 59) {
+            minimalDeliveryTime++;
+            System.out.println("Для доставки вашей банковской карты нам потребуеться "
+                    + minimalDeliveryTime + " дня");
+
+        } else if (deliveryDistance <= 100) {
+            minimalDeliveryTime += 2;
+            System.out.println("Для доставки вашей банковской карты нам потребуеться "
+                    + minimalDeliveryTime + " дня");
         }
     }
 }
