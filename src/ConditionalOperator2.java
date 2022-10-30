@@ -29,6 +29,7 @@ public class ConditionalOperator2 {
             System.out.println("«Установите облегченную версию приложения для " + action + " по ссылке».");
         } else {
             System.out.println("Ссылка на скачивание приложения для " + action);
+
         }
     }
 }
