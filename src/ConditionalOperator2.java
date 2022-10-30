@@ -62,5 +62,22 @@ public class ConditionalOperator2 {
             System.out.println("Для доставки вашей банковской карты нам потребуеться "
                     + minimalDeliveryTime + " дня");
         }
+
+        System.out.println();
+        System.out.println("Задача 5");
+
+        System.out.print("Введите месяц: ");
+        int monthNumber = scanner.nextInt();
+
+        if (monthNumber <= 0 || monthNumber >= 13) {
+            System.out.println("Неверно введен месяц");
+        } else {
+            switch (monthNumber) {
+                case 3, 4, 5 -> System.out.println("Весна");
+                case 6, 7, 8 -> System.out.println("Лето");
+                case 9, 10, 11 -> System.out.println("Осень");
+                default -> System.out.println("Зима");
+            }
+        }
     }
 }
