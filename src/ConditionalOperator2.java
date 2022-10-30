@@ -5,12 +5,30 @@ public class ConditionalOperator2 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Задание 1");
 
-        System.out.println("Ваша операционная система:\n0.iOS;\n1.Android");
-        System.out.print("Выберите свою: ");
+        System.out.println("Ваша операционная система на смартфоне:\n0.iOS;\n1.Android");
+        System.out.print("Выберите свою введите 0 или 1: ");
         int clientOS = scanner.nextInt();
+        String action = "";
         switch (clientOS) {
-            case 0 -> System.out.println("«Установите версию приложения для iOS по ссылке»");
-            case 1 -> System.out.println("«Установите версию приложения для Android по ссылке»");
+            case 0 -> {
+                System.out.println("«Установите версию приложения для iOS по ссылке»");
+                action = "iOS";
+            }
+            case 1 -> {
+                System.out.println("«Установите версию приложения для Android по ссылке»");
+                action = "Android";
+
+            }
+        }
+        System.out.println();
+        System.out.println("Задача 2");
+        System.out.print("Введите год производства вашего смартфона: ");
+        int clientDeviceYear = scanner.nextInt();
+
+        if (clientDeviceYear < 2015) {
+            System.out.println("«Установите облегченную версию приложения для " + action + " по ссылке».");
+        } else {
+            System.out.println("Ссылка на скачивание приложения для " + action);
         }
     }
 }
