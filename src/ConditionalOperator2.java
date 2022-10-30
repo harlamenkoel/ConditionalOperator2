@@ -29,7 +29,16 @@ public class ConditionalOperator2 {
             System.out.println("«Установите облегченную версию приложения для " + action + " по ссылке».");
         } else {
             System.out.println("Ссылка на скачивание приложения для " + action);
+        }
 
+        System.out.println("Задача 3");
+        System.out.print("Введите год: ");
+        int year = scanner.nextInt();
+
+        if ((year % 4 == 0) && ((year % 100 != 0) || (year % 400 == 0))) {
+            System.out.println("Год является високосным");
+        } else {
+            System.out.println("Год не является високосным");
         }
     }
 }
